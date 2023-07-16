@@ -18,7 +18,7 @@ function darkMode()
     var checkBox = document.getElementById("toggle");
     const root = document.querySelector(':root');
     const image = document.getElementById("moon_Or_Sun");
-    if(checkBox.checked) // DARK
+    if(checkBox.checked === false) // DARK
     {
         image.classList.remove("icon--light");
         image.classList.add("icon--dark");
