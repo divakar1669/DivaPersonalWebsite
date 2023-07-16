@@ -74,5 +74,10 @@ function redirectToResume()
 
 }
 
-
+function diva()
+{
+  var x =10;
+  document.getElementById("aboutDiva").innerHTML += "     ";
+}
+diva();
 typeWriter();

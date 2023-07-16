@@ -154,8 +154,8 @@ img {
     background-image: radial-gradient(circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient(215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient(circle at right, #111, rgba(51, 51, 51, 1));
     background-color: #333;
     padding: 5px;
-    width: 1000px;
-    height: 400px;
+    width: 100%;
+    height: 100%
 }
 
 .blackboard>p {
