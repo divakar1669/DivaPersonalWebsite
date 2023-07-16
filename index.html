@@ -14,8 +14,6 @@
     <link rel="shortcut icon" href="./images/aboutMe/resume_2006710.png" type="image/x-icon">
     <style>
 
-
-
     .timeline {
       display: flex;
       flex-direction: column;
@@ -31,6 +29,7 @@
       margin-bottom: 30px;
       opacity: 0;
       animation: fade-in 1s ease-in-out forwards;
+      cursor: pointer;
     }
 
     @keyframes fade-in {
@@ -58,7 +57,7 @@
       transform: translateX(-50%);
       width: 2px;
       height: 100%;
-      background-color: var(--backrgoud-color);
+      background-color:var(--backrgoud-color);
       z-index: 1;
     }
 
@@ -70,11 +69,17 @@
       position: relative;
       z-index: 2;
       flex: 1;
-      margin-right: 30px; /* Increased margin-right value */
+      margin-right: 15px;
+      overflow: hidden;
+      max-height: 100px;
+      transition: max-height 0.3s ease;
+    }
+
+    .timeline-details.expanded {
+      max-height: none;
     }
 
     .timeline-logo {
-
       
       object-fit: cover;
       margin-right: 30px;
@@ -94,7 +99,7 @@
     }
 
     .timeline-job-details {
-      color:var(--text-color);
+      color: var(--text-color);
     }
 
     .timeline-company {
