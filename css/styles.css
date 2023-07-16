@@ -1,0 +1,177 @@
+:root {
+
+    --border-radius: 30px;
+    --thickness: 5px;
+    --border-color: #1e90ff;
+    --text-color: white;
+    --backrgoud-color: black;
+}
+
+body {
+    background-color: var(--backrgoud-color);
+    color: var(--text-color);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+address,
+strong{
+    background-color: var(--backrgoud-color);
+    color: var(--text-color);
+    margin: 5px;
+}
+
+.fixed-header,
+.fixed-footer {
+    width: 100%;
+    position: fixed;
+    background: var(--backrgoud-color);
+    color: var(--text-color);
+    text-align: left;
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.fixed-header {
+    top: 0;
+    margin: 0px;
+}
+
+.fixed-header h4,
+.checkbox label {
+    display: inline-block;
+    margin: 30px;
+}
+
+.fixed-header h4:hover {
+    transform: scale(1.1);
+
+}
+
+.fixed-footer {
+    bottom: 0;
+    margin-bottom: 0px;
+}
+
+.resume_img {
+    border: solid 10px transparent;
+    border-radius: 0;
+    width: 50px;
+    height: 50px;
+}
+
+img {
+    border: solid 10px transparent;
+    border-radius: 50%;
+    margin-right: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+.subHeader {
+    margin: 5%;
+}
+
+.academic_info:nth-child(odd) {
+
+    border: var(--thickness) dashed var(--border-color);
+    border-bottom-left-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+    padding: 10px;
+    border-top: 0px;
+    border-right: 0px;
+    margin-right: var(--border-radius);
+    padding: 10px;
+    text-align: left;
+    color: var(--text-color);
+
+}
+
+.academic_info:nth-child(even) {
+
+    border: var(--thickness) dashed var(--border-color);
+    border-bottom-right-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    padding: 10px;
+    border-top: 0px;
+    border-left: 0px;
+    margin-left: var(--border-radius);
+    padding: 10px;
+    text-align: right;
+    color: var(--text-color);
+
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.my-heading {
+    margin: 30px;
+}
+
+.element {
+    float: right;
+    margin: 30px;
+    color: var(--text-color);
+}
+
+.aboutMe,
+.aboutMe>p {
+    background-color: black;
+    color: bisque;
+    padding: 20px;
+    border-radius: 20px;
+    border: 10px;
+    font-size: large;
+    text-align: center;
+    line-height: 2;
+}
+
+.blackboard {
+    position: relative;
+    border: tan solid 12px;
+    border-top: #bda27e solid 12px;
+    border-left: #b19876 solid 12px;
+    border-bottom: #c9ad86 solid 12px;
+    box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient(circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient(215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient(circle at right, #111, rgba(51, 51, 51, 1));
+    background-color: #333;
+    padding: 5px;
+    width: 1000px;
+    height: 400px;
+}
+
+.blackboard>p {
+    vertical-align: middle;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.6em;
+    color: rgba(238, 238, 238, 0.7);
+    padding: 20px;
+}
+
+.blackboard:before {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(175deg, transparent, transparent 40px, rgba(120, 120, 120, 0.1) 100px, rgba(120, 120, 120, 0.1) 110px, transparent 220px, transparent), linear-gradient(200deg, transparent 80%, rgba(50, 50, 50, 0.3)), radial-gradient(ellipse at right bottom, transparent, transparent 200px, rgba(80, 80, 80, 0.1) 260px, rgba(80, 80, 80, 0.1) 320px, transparent 400px, transparent);
+    border: #2c2c2c solid 2px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.2em;
+    color: rgba(238, 238, 238, 0.7);
+    text-align: center;
+    padding-top: 20px;
+}
+
+.hide {
+    visibility: hidden;
+}

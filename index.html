@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diva's Profersional Website</title>
+    <link rel="stylesheet" href="./css/social.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/darkmode.css">
+    <link rel="stylesheet" href="./css/sendMessage.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="fixed-header">
+
+        <h4 onclick="scrollToElement('about-me')">About Me</h4>
+        <h4 onclick="scrollToElement('work-experience')">Work Experience</h4>
+        <h4 onclick="scrollToElement('academic-info')">Academic Info</h4>
+        <h4 onclick="scrollToElement('skills-project')">Skills & Project</h4>
+        <h4 onclick="scrollToElement('get-in-touch')">Get In Touch</h4>
+
+        <label class="toggle " for="toggle">
+            <ion-icon id="moon_Or_Sun" class="icon icon--light" name="moon-outline"></ion-icon>
+            <!-- <ion-icon class="icon icon--dark" name="moon-outline"></ion-icon> -->
+        </label>
+        <input class="checkbox" type="checkbox" id="toggle" onclick="darkMode()" />
+        <!-- add ionicons - icon-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </div>
+
+    <div class="subHeader" id="about-me">
+        <div class="container">
+            <h1 class="my-heading">About Me</h1>
+        </div>
+        <div class="container">
+            <div class="element">
+                <img src="./images/aboutMe/1667041650094.jpeg" alt="my_photo">
+
+                <div class="">
+                    <div class="" style="margin:40px 0px 0px 60px;">
+                     <a href="" target="_blank"> <img class="resume_img" src="./images/aboutMe/resume_574803.png" alt="resume"></a>
+
+                 </div>
+                 <div class="" style="margin:40px 0px 0px 30px;">
+                    <p >Download Resume</p>
+                </div>
+                </div>
+
+            </div>
+            <div class="element">
+
+                <div class="blackboard">
+                    <p id="aboutDiva">
+
+                    </p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <div class="subHeader" id="work-experience">
+        <div class="container">
+            <h1 class="my-heading">Work Experience</h1>
+        </div>
+
+    </div>
+
+    <div class="subHeader" id="academic-info">
+
+        <div class="container">
+            <h1 class="my-heading">Academic Info</h1>
+        </div>
+
+        <div class="academic_info">
+            <div class="container">
+                <div class="element">
+                    <h2>August 2017 - May 2021</h2>
+                    <span> <b>Bachelor Degree in Engineering</b></span>
+                    <br>
+                    <span><b>College</b> Sri Sai Ram Institute Of Technology</span>
+                    <br>
+                    <span><b>University</b> Anna University</span>
+                    <br>
+                    <span><b>GGPA</b> 9.16 (90%)</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="academic_info">
+            <div class="container">
+            </div>
+            <div style="margin: 30px;">
+                <h2>July 2015 - May 2017</h2>
+                <span><b>Class 12</b></h3>
+                    <br>
+                    <span><b>Alma mater</b> Montfort Matric Higher Secondary School</span>
+                    <br>
+                    <span><b>Board</b> Tamil Nadu State Board</span>
+                    <br>
+                    <span><b>Score</b> 89.75%</span>
+            </div>
+
+        </div>
+        <div class="academic_info">
+            <div class="container">
+                <div class="element">
+                    <h2>July 2004 - May 2015</h2>
+                    <span><b>Class 10</b></span>
+                    <br>
+                    <span><b>Alma mater</b> Montfort Matric Higher Secondary School</span>
+                    <br>
+                    <span><b>Board</b> Tamil Nadu State Board</span>
+                    <br>
+                    <span><b>Score</b> 95.5%</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="subHeader" id="skills-project">
+        <div class="container">
+            <h1 class="my-heading">Skills</h1>
+        </div>
+
+    </div>
+
+    <!-- <div class="subHeader">
+        <div class="container">
+            <h1 class="my-heading">Projects</h1>
+        </div>
+
+    </div> -->
+
+
+    <div class="subHeader" id="my-books">
+        <div class="container">
+            <h1 class="my-heading">My Book Shlef</h1>
+        </div>
+    </div>
+
+    <div class="subHeader" id="get-in-touch">
+        <div class="container">
+            <h1 class="my-heading">Get In Touch</h1>
+        </div>
+        <div class="social_container">
+            <div class="input_box">
+                <h4>Name</h4>
+                <input type="text" name="" id="" style="border: 2px stipped  #f9c23c; ;"  required>
+                <h4>Email</h4>
+                <input type="email" name="" id="" required>
+                <h4>Subject</h4>
+                <input type="text" name="" id="" required>
+                <h4>Message</h4>
+                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                <br>
+                <div id="message">
+                    <div class="btn">
+                      <p>Send Message</p>
+                      <ion-icon class="send" name="send"></ion-icon>
+                      <ion-icon class="send2" name="send"></ion-icon>
+                    </div>
+                 </div>                  
+ 
+            </div>
+
+            <div class="contact_container">
+                <div class="">
+                    <div class="contact_element">
+                        <img src="./images/aboutMe/location.png" alt="address">
+                        <address>
+                            <strong>Address</strong>
+                            <br> 7/18, Silver Street,
+                            <br>St.Thomas Mount, Chennai , India</br>
+                        </address>
+                        <br>
+                    </div>
+
+                    <div class="contact_element">
+                        <img src="./images/aboutMe/phone.png" alt="phone">
+                        <div class="contact-number">
+                            <address>
+                                <strong>Phone Number</strong>
+                                <br>(+91) 7395902123
+                            </address>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div class="">
+    <div class="social_container fixed-footer">
+        <div class="social_tag">
+            <h3>
+                Made with &#9829; by Diva
+            </h3>
+        </div>
+        <div class="social_box">
+            <a href="mailto:divakar1669@gmail.com" target="_blank"> <img src="./images/Social/email.png"
+                    alt="email"></a>
+            <a href="https://www.linkedin.com/in/divakart" target="_blank"> <img src="./images/Social/linkedin .png"
+                    alt="linkedin"> </a>
+            <a href="https://github.com/divakar1669" target="_blank"> <img src="./images/Social/github.png"
+                    alt="gitHub"></a>
+            <a href="https://twitter.com/divakar1669" target="_blank"> <img src="./images/Social/twitter.png"
+                    alt="twitter"> </a>
+            <a href="https://www.instagram.com/divakarthiyagarajen/" target="_blank"><img
+                    src="./images/Social/instagram.png" alt="instagram"></a>
+        </div>
+    </div>
+
+    </div>
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>

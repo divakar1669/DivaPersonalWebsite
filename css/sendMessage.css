@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  #message {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin: 20px;
+  }
+  
+  .btn {
+    position: relative;
+    width: 200px;
+    border: 5px solid #f9c23c;
+    padding: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .btn p {
+    text-transform: uppercase;
+    text-align: center;
+    color:var(--text-color);
+    font-weight: 900;
+    font-size: 20px;
+    margin-left: 30px;
+    transition: all 0.5s ease;
+  }
+  
+  .send {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color:var(--text-color);
+    transition: all 0.5s ease;
+  }
+  
+  .send2 {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    color: #696666;
+    transition: all 0.5s ease;
+  }
+  
+  .btn:hover {
+    background: #f9c23c;
+    transition: all 0.5s ease;
+  }
+  
+  .btn:hover p {
+    color: #696666;
+    transition: all 0.5s ease;
+    animation: move 1s linear 1s forwards;
+  }
+  
+  .btn:hover .send {
+    top: -50px;
+    transition: all 0.5s ease;
+  }
+  
+  .btn:hover .send2 {
+    top: 15px;
+    transition: all 0.5s ease;
+    animation: sending 1s linear 1s forwards;
+  }
+  
+  @keyframes sending {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translate(40px, -60px);
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-18px);
+    }
+  }
+  

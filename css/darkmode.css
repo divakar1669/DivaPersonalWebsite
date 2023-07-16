@@ -1,0 +1,24 @@
+
+  .toggle {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .checkbox {
+    width: 10%;
+    height: 10%;
+    display: none;
+  }
+  .icon {
+    width: 50%;
+    font-size: 32px;
+    line-height: 60px;
+    text-align: center;
+    z-index: 1;
+  }

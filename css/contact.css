@@ -1,0 +1,66 @@
+h4 {
+    margin: 10px;
+}
+.contact_container
+{
+display: flex;
+margin: 20px;
+padding: 10px;
+}
+
+.contact_element
+{
+margin: 20px;
+}
+button {
+    margin: 2px;
+}
+
+.contact_element img {
+
+height: 50px;
+width: 50px;
+margin: 20px;
+position: relative;
+transition: transform 0.2s ease-in-out;
+border-radius: 0%;
+margin: 0;
+}
+
+.contact_element img:hover {
+transform: scale(1.1);
+
+}
+
+input
+{
+    margin: 5px;
+    width: 540px;
+    height: 5%;
+    background-color: var(--backrgoud-color);
+    color: var(--text-color);
+    border: 2px stipped  #f9c23c; ;
+    border-radius: 30px;
+    box-shadow: none;
+    padding: 5px 5px 5px 20px;
+}
+
+textarea {
+    margin: 5px;
+    width: 540px;
+    background-color: var(--backrgoud-color);
+    color: var(--text-color);
+    padding: 10px 5px 5px 20px;
+}
+
+.input_text
+{
+    margin: 5px;
+    width: 540px;
+    height: 25px;
+
+    padding: 10px;
+}
+
+
+

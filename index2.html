@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Numbered Box Example</title>
+  <style>
+   .numbered-box {
+  position: relative;
+  border: 2px solid #000;
+  padding: 10px;
+  margin: 20px;
+}
+
+.numbered-box::before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.numbered-box::after {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="numbered-box">
+    Content goes here
+  </div>
+  <div class="numbered-box">
+    Content goes here
+  </div>
+  <div class="numbered-box">
+    Content goes here
+  </div>
+</body>
+</html>
