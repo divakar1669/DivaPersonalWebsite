@@ -48,12 +48,26 @@ function scrollToElement(elementId) {
   });
 }
 
-const timelineItems = document.querySelectorAll('.timeline-item');
+  const timelineItems = document.querySelectorAll('.timeline-item');
 
 timelineItems.forEach(item => {
   item.addEventListener('click', () => {
-    item.querySelector('.timeline-details').classList.toggle('expanded');
+    const details = item.querySelector('.timeline-details');
+    const logo = item.querySelector('.timeline-logo');
+
+    details.classList.toggle('expanded');
+    logo.classList.toggle('expanded');
+
+    if (details.classList.contains('expanded')) {
+      logo.style.animation = 'logo-scale 0.3s ease';
+      details.style.animation = 'slide-in 0.3s ease';
+    } else {
+      logo.style.animation = 'logo-scale 0.3s ease reverse';
+      details.style.animation = 'slide-out 0.3s ease';
+    }
   });
 });
+
+
 
 typeWriter();

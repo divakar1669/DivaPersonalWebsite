@@ -31,7 +31,11 @@
       animation: fade-in 1s ease-in-out forwards;
       cursor: pointer;
     }
-
+    .timeline-details p ,.timeline-details span,  h3
+    {
+        margin: 5px;
+        padding: 5px;
+    }
     @keyframes fade-in {
       from {
         opacity: 0;
@@ -96,6 +100,8 @@
       margin: 0;
       font-size: 20px;
       font-weight: bold;
+      margin: 5px;
+        padding: 5px;
     }
 
     .timeline-job-details {
@@ -109,6 +115,32 @@
 
     .timeline-item:last-child {
       margin-bottom: 0;
+    }
+       /* Overlay */
+       .timeline-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-overlay {
+      opacity: 1;
+    }
+
+    .timeline-overlay-text {
+      font-weight: bold;
+      color: #888;
+      font-size: 18px;
     }
     </style>
 </head>
@@ -182,6 +214,7 @@
                           <p class="timeline-company">Chennai , TN, India</p>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor felis et velit tincidunt, a dictum eros hendrerit. In hac habitasse platea dictumst.</p>
                         </div>
+                        <div class="timeline-overlay">Tap to Expand</div>
                         <div class="timeline-logo">
                             <img src="./images/work Experience/Zoho-logo.png" alt="Zoho">
                         </div>
@@ -193,15 +226,22 @@
                           <h3 class="timeline-title">Program Analyst</h3>
                           <span class="timeline-job-details">Cognizant - June 2021 to October 2022</span>
                           <p class="timeline-company">Chennai , TN, India</p>
+                          <div>
+                          </div>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor felis et velit tincidunt, a dictum eros hendrerit. In hac habitasse platea dictumst.</p>
+
                         </div>
+                        <div class="timeline-overlay">Tap to Expand</div>
                         <div class="timeline-logo">
                             <img src="./images/work Experience/CTSH_BIG.png" alt="Cognizant">
-
                         </div>
                       </div>
                     </div>
                   </div>
+            </div>
+            <div>
+                <br>
+                <br>
             </div>
         </div>
 

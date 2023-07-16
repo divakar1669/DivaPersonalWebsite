@@ -73,7 +73,7 @@
     }
 
     .timeline-details.expanded {
-      max-height: none;
+      max-height: 1000px; /* Adjust the value to accommodate larger content */
     }
 
     .timeline-logo {
@@ -81,6 +81,7 @@
       height: 80px;
       border-radius: 50%;
       object-fit: cover;
+      transition: transform 0.3s ease;
     }
 
     .timeline-title {
@@ -101,6 +102,74 @@
     .timeline-item:last-child {
       margin-bottom: 0;
     }
+
+    /* Animation */
+    @keyframes logo-scale {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slide-in {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-out {
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+    }
+
+    /* Overlay */
+    .timeline-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 3;
+    }
+
+    .timeline-item:hover .timeline-overlay {
+      opacity: 1;
+    }
+
+    .timeline-overlay-text {
+      font-weight: bold;
+      color: #888;
+      font-size: 18px;
+    }
+
+    .timeline-item:hover .timeline-details,
+    .timeline-item:hover .timeline-logo {
+      z-index: 4;
+    }
   </style>
 </head>
 <body>
@@ -116,6 +185,9 @@
         <div class="timeline-logo">
           <img src="company_a_logo.png" alt="Company A Logo">
         </div>
+        <div class="timeline-overlay">
+          <span class="timeline-overlay-text">Tap to Expand</span>
+        </div>
       </div>
     </div>
     <div class="timeline-item">
@@ -129,6 +201,9 @@
         <div class="timeline-logo">
           <img src="company_b_logo.png" alt="Company B Logo">
         </div>
+        <div class="timeline-overlay">
+          <span class="timeline-overlay-text">Tap to Expand</span>
+        </div>
       </div>
     </div>
   </div>
@@ -137,8 +212,34 @@
     const timelineItems = document.querySelectorAll('.timeline-item');
 
     timelineItems.forEach(item => {
-      item.addEventListener('click', () => {
-        item.querySelector('.timeline-details').classList.toggle('expanded');
+      item.addEventListener('mouseenter', () => {
+        const details = item.querySelector('.timeline-details');
+        const logo = item.querySelector('.timeline-logo');
+        const overlay = item.querySelector('.timeline-overlay');
+
+        details.classList.add('expanded');
+        logo.classList.add('expanded');
+        overlay.classList.add('expanded');
+
+        if (details.classList.contains('expanded')) {
+          logo.style.animation = 'logo-scale 0.3s ease';
+          details.style.animation = 'slide-in 0.3s ease';
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        const details = item.querySelector('.timeline-details');
+        const logo = item.querySelector('.timeline-logo');
+        const overlay = item.querySelector('.timeline-overlay');
+
+        details.classList.remove('expanded');
+        logo.classList.remove('expanded');
+        overlay.classList.remove('expanded');
+
+        if (!details.classList.contains('expanded')) {
+          logo.style.animation = 'logo-scale 0.3s ease reverse';
+          details.style.animation = 'slide-out 0.3s ease';
+        }
       });
     });
   </script>
