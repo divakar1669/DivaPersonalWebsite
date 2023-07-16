@@ -13,192 +13,195 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./images/aboutMe/resume_2006710.png" type="image/x-icon">
     <style>
+        /* === BASE HEADING === */
+
+        h1 {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            font-family: "Raleway", sans-serif;
+            font-weight: bolder;
+            font-size: 40px;
+            color: var(--text-color) -webkit-transition: all 0.4s ease 0s;
+            -o-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.5em;
+            line-height: 1;
+        }
+
+        h1 em {
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* === HEADING STYLE #1 === */
+        .one h1 {
+            text-align: center;
+            padding-bottom: 5px;
+        }
+
+        .one h1:before {
+            width: 28px;
+            height: 5px;
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 3px;
+            left: 50%;
+            margin-left: -14px;
+            background-color: #b80000;
+        }
+
+        .one h1:after {
+            width: 100px;
+            height: 1px;
+            display: block;
+            content: "";
+            position: relative;
+            margin-top: 10px;
+            left: 50%;
+            margin-left: -50px;
+            background-color: #b80000;
+        }
 
 
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
 
-/* === BASE HEADING === */ 
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+            cursor: pointer;
+        }
 
-h1 {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-weight: bolder;
-  font-size: 40px;
-  color: var(--text-color)
-  -webkit-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+        .timeline-details p,
+        .timeline-details span,
+        h3 {
+            margin: 5px;
+            padding: 5px;
+        }
 
-}
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
 
-h1 span {
-  display: block;
-  font-size: 0.5em;
-  line-height: 1;
-}
-h1 em {
-  font-style: normal;
-  font-weight: 600;
-}
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-/* === HEADING STYLE #1 === */
-.one h1 {
-  text-align: center;
-  padding-bottom: 5px;
-}
-.one h1:before {
-  width: 28px;
-  height: 5px;
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: 3px;
-  left: 50%;
-  margin-left: -14px;
-  background-color: #b80000;
-}
-.one h1:after {
-  width: 100px;
-  height: 1px;
-  display: block;
-  content: "";
-  position: relative;
-  margin-top: 10px;
-  left: 50%;
-  margin-left: -50px;
-  background-color: #b80000;
-}
+        .timeline-content {
+            display: flex;
+            align-items: flex-start;
+            flex: 1;
+            justify-content: space-between;
+        }
 
+        .timeline-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--backrgoud-color);
+            z-index: 1;
+        }
 
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      margin-top: 50px;
-    }
+        .timeline-details {
+            background-color: var(--backrgoud-color);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            margin-right: 15px;
+            overflow: hidden;
+            max-height: 100px;
+            transition: max-height 0.3s ease;
+        }
 
-    .timeline-item {
-      display: flex;
-      align-items: flex-start;
-      position: relative;
-      margin-bottom: 30px;
-      opacity: 0;
-      animation: fade-in 1s ease-in-out forwards;
-      cursor: pointer;
-    }
-    .timeline-details p ,.timeline-details span,  h3
-    {
-        margin: 5px;
-        padding: 5px;
-    }
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        .timeline-details.expanded {
+            max-height: none;
+        }
 
-    .timeline-content {
-      display: flex;
-      align-items: flex-start;
-      flex: 1;
-      justify-content: space-between;
-    }
+        .timeline-logo {
 
-    .timeline-line {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 100%;
-      background-color:var(--backrgoud-color);
-      z-index: 1;
-    }
+            object-fit: cover;
+            margin-right: 30px;
+        }
 
-    .timeline-details {
-      background-color: var(--backrgoud-color);
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 2;
-      flex: 1;
-      margin-right: 15px;
-      overflow: hidden;
-      max-height: 100px;
-      transition: max-height 0.3s ease;
-    }
+        .timeline-logo img {
+            border-radius: 0%;
+            width: 300px;
+            height: 100px;
+        }
 
-    .timeline-details.expanded {
-      max-height: none;
-    }
+        .timeline-title {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px;
+            padding: 5px;
+        }
 
-    .timeline-logo {
-      
-      object-fit: cover;
-      margin-right: 30px;
-    }
+        .timeline-job-details {
+            color: var(--text-color);
+        }
 
-    .timeline-logo img
-    {
-  border-radius: 0%;
-  width:300px;
-      height: 100px;
-    }
+        .timeline-company {
+            margin-top: 5px;
+            color: var(--text-color);
+        }
 
-    .timeline-title {
-      margin: 0;
-      font-size: 20px;
-      font-weight: bold;
-      margin: 5px;
-        padding: 5px;
-    }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
 
-    .timeline-job-details {
-      color: var(--text-color);
-    }
+        /* Overlay */
+        .timeline-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-    .timeline-company {
-      margin-top: 5px;
-      color:var(--text-color);
-    }
+        .timeline-item:hover .timeline-overlay {
+            opacity: 1;
+        }
 
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-       /* Overlay */
-       .timeline-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .timeline-item:hover .timeline-overlay {
-      opacity: 1;
-    }
-
-    .timeline-overlay-text {
-      font-weight: bold;
-      color: #888;
-      font-size: 18px;
-    }
+        .timeline-overlay-text {
+            font-weight: bold;
+            color: #888;
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -225,8 +228,8 @@ h1 em {
         <div class="container">
             <div class="one">
                 <h1 class="my-heading">About Me</h1>
-              </div>
-           
+            </div>
+
         </div>
         <div class="container">
             <div class="element">
@@ -234,12 +237,13 @@ h1 em {
 
                 <div class="">
                     <div class="" style="margin:40px 0px 0px 60px;">
-                     <a href="" target="_blank"> <img class="resume_img" src="./images/aboutMe/resume_574803.png" alt="resume"></a>
+                        <a href="https://drive.google.com/file/d/1zlYW2g8gpFSqpP-zMT8-VUFvzhWipcKn/view?usp=sharing" target="_blank"> <img class="resume_img" src="./images/aboutMe/resume_574803.png"
+                                alt="resume"></a>
 
-                 </div>
-                 <div class="" style="margin:40px 0px 0px 30px;">
-                    <p >Download Resume</p>
-                </div>
+                    </div>
+                    <div class="" style="margin:40px 0px 0px 30px;">
+                     <p onclick="redirectToResume()">Download Resume</p>
+                    </div>
                 </div>
 
             </div>
@@ -264,48 +268,102 @@ h1 em {
         <div class="container">
             <div class="one">
                 <h1 class="my-heading">Work Experience</h1>
-              </div>
+            </div>
         </div>
-            <div class="">
-                <div class="timeline">
-                    <div class="timeline-item">
-                      <div class="timeline-content">
+        <div class="">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
                         <div class="timeline-details">
-                          <h3 class="timeline-title">Software Development Engineer</h3>
-                          <span class="timeline-job-details">Zoho - October 2022 to Present</span>
-                          <p class="timeline-company">Chennai , TN, India</p>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor felis et velit tincidunt, a dictum eros hendrerit. In hac habitasse platea dictumst.</p>
+                            <h3 class="timeline-title">Software Development Engineer</h3>
+                            <span class="timeline-job-details">Zoho - October 2022 to Present</span>
+                            <p class="timeline-company">Chennai , TN, India</p>
+                            <p><strong>Description:</strong></p>
+                            <p>Catalyst by Zoho: A scalable serverless platform empowering developers to build and
+                                deploy high-quality solutions without server management.</p>
+                            <p>Seamless deployment: Focus on creating world-class solutions without the hassle of server
+                                maintenance.</p>
+                            <p><strong>Responsibilities & Deliverables : </strong></p>
+                            <p>Utilized extensive software engineering experience to optimize the Zoho Catalyst cloud
+                                platform. </p>
+                            <p>Effectively incorporated integrated circuits as the primary target in cron jobs and event
+                                listeners, harnessing their potential to optimize and streamline various automated
+                                processes within the system</p>
+                            <p>Implemented advanced monitoring mechanisms to proactively identify and resolve potential
+                                issues.</p>
+                            <p>Contributed to the documentation of best practices and technical guidelines for other
+                                developers to reference during their work on the platform.</p>
+                            <p>Participated in regular code reviews to maintain high code quality and adherence to best
+                                practices. </p>
+                            <p>Collaborated with the development team to identify areas for improvement within the Zoho
+                                Catalyst platform and propose optimization strategies. </p>
+                            <p><strong>IDE/Compilers/Tools:</strong></p>
+                            <p>Eclipse, IntelliJ IDEA for Java development.</p>
+                            <p>NPM (Node Package Manager) for managing JavaScript packages and dependencies.</p>
+                            <p>Visual Studio Code for JavaScript and HTML development.</p>
+                            <p>MySQL Workbench , ZDCM for managing and interacting with MySQL databases.</p>
+                            <p>Webpack for bundling JavaScript and assets for production deployment.</p>
+                            <p>GitLab,GitHub,Zoho Repository for version control and collaborative development. </p>
+                            <p>Postman for API testing and development.</p>
                         </div>
+
                         <div class="timeline-overlay">Tap to Expand</div>
                         <div class="timeline-logo">
                             <img src="./images/work Experience/Zoho-logo.png" alt="Zoho">
                         </div>
-                      </div>
                     </div>
-                    <div class="timeline-item">
-                      <div class="timeline-content">
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
                         <div class="timeline-details">
-                          <h3 class="timeline-title">Program Analyst</h3>
-                          <span class="timeline-job-details">Cognizant - June 2021 to October 2022</span>
-                          <p class="timeline-company">Chennai , TN, India</p>
-                          <div>
-                          </div>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor felis et velit tincidunt, a dictum eros hendrerit. In hac habitasse platea dictumst.</p>
+                            <h3 class="timeline-title">Program Analyst</h3>
+                            <span class="timeline-job-details">Cognizant - June 2021 to October 2022</span>
+                            <p class="timeline-company">Chennai , TN, India</p>
+                            <div>
+                            </div>
+                            <p><strong>Description:</strong></p>
+
+                            <p>I have had the privilege of working for a prestigious US Health Giant as an Application
+                                Developer</p>
+                            <p>During this time, I actively participated in the development and implementation of
+                                various applications, ensuring their smooth operation and continuous improvement. </p>
+                            <p>Demonstrated my expertise in troubleshooting and resolving production issues within
+                                designated SLAs, emphasizing the importance of delivering high-quality results. </p>
+
+                            <p><strong>Responsibilities & Deliverables : </strong></p>
+
+                            <p>Collaborating with cross-functional teams to develop and implement new application
+                                features and functionalities.</p>
+                            <p>Designing and implementing data ingestion pipelines to efficiently process and ingest
+                                data from various sources.</p>
+                            <p>Performed quality assurance to meet appropriate standards and facilitate improvement of
+                                processes.</p>
+                            <p>Creating and maintaining technical documentation for applications, processes, and
+                                procedures.</p>
+                            <p>Analyze and solve production bugs and issue within SLA to ensure Continuous delivery.</p>
+
+                            <p><strong>IDE/Compilers/Tools:</strong></p>
+
+                            <p>Utilizing version control systems like Git to manage and track code changes.</p>
+                            <p>ServiceNow to handle incident and requests from clien </p>
+                            <p>Employing JIRA or similar project management tools to track and prioritize tasks and
+                                issues.</p>
+                            <p>SQL for querying client databases with custom validations. </p>
 
                         </div>
                         <div class="timeline-overlay">Tap to Expand</div>
                         <div class="timeline-logo">
                             <img src="./images/work Experience/CTSH_BIG.png" alt="Cognizant">
                         </div>
-                      </div>
                     </div>
-                  </div>
-            </div>
-            <div>
-                <br>
-                <br>
+                </div>
             </div>
         </div>
+        <div>
+            <br>
+            <br>
+        </div>
+    </div>
 
     </div>
 
@@ -314,7 +372,7 @@ h1 em {
         <div class="container">
             <div class="one">
                 <h1 class="my-heading">Academic Info</h1>
-              </div>
+            </div>
         </div>
 
         <div class="academic_info">
@@ -368,7 +426,7 @@ h1 em {
         <div class="container">
             <div class="one">
                 <h1 class="my-heading">Skills</h1>
-              </div>
+            </div>
         </div>
 
     </div>
@@ -385,7 +443,7 @@ h1 em {
         <div class="container">
             <div class="one">
                 <h1 class="my-heading">My Book Shlef</h1>
-              </div>
+            </div>
         </div>
     </div>
 
@@ -393,12 +451,12 @@ h1 em {
         <div class="container">
             <div class="one">
                 <h1 class="my-heading">Get In Touch</h1>
-              </div>
+            </div>
         </div>
         <div class="social_container">
             <div class="input_box">
                 <h4>Name</h4>
-                <input type="text" name="" id="" style="border: 2px stipped  #f9c23c; ;"  required>
+                <input type="text" name="" id="" style="border: 2px stipped  #f9c23c; ;" required>
                 <h4>Email</h4>
                 <input type="email" name="" id="" required>
                 <h4>Subject</h4>
@@ -408,12 +466,12 @@ h1 em {
                 <br>
                 <div id="message">
                     <div class="btn">
-                      <p>Send Message</p>
-                      <ion-icon class="send" name="send"></ion-icon>
-                      <ion-icon class="send2" name="send"></ion-icon>
+                        <p>Send Message</p>
+                        <ion-icon class="send" name="send"></ion-icon>
+                        <ion-icon class="send2" name="send"></ion-icon>
                     </div>
-                 </div>                  
- 
+                </div>
+
             </div>
 
             <div class="contact_container">
@@ -463,7 +521,7 @@ h1 em {
                     src="./images/Social/instagram.png" alt="instagram"></a>
         </div>
         <div class="social_tag">
-            <h4  onclick="scrollToElement('get-in-touch')">
+            <h4 onclick="scrollToElement('get-in-touch')">
                 Share thoughts and insights ?
             </h4>
         </div>
