@@ -79,8 +79,9 @@ img {
     margin: 5%;
 }
 
-.academic_info:nth-child(odd) {
-
+.academic_info:nth-child(even) {
+    display: flex;
+    justify-content: flex-start;
     border: var(--thickness) dashed var(--border-color);
     border-bottom-left-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
@@ -94,7 +95,8 @@ img {
 
 }
 
-.academic_info:nth-child(even) {
+
+.academic_info:nth-child(odd) {
 
     border: var(--thickness) dashed var(--border-color);
     border-bottom-right-radius: var(--border-radius);
@@ -106,6 +108,12 @@ img {
     padding: 10px;
     text-align: right;
     color: var(--text-color);
+
+}
+
+.academic_info:first-child{
+    
+   border-top: var(--thickness) ;
 
 }
 
