@@ -12,6 +12,100 @@
     <link rel="stylesheet" href="./css/sendMessage.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./images/aboutMe/resume_2006710.png" type="image/x-icon">
+    <style>
+
+
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .timeline-content {
+      display: flex;
+      align-items: flex-start;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: var(--backrgoud-color);
+      z-index: 1;
+    }
+
+    .timeline-details {
+      background-color: var(--backrgoud-color);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      margin-right: 30px; /* Increased margin-right value */
+    }
+
+    .timeline-logo {
+
+      
+      object-fit: cover;
+      margin-right: 30px;
+    }
+
+    .timeline-logo img
+    {
+  border-radius: 0%;
+  width:300px;
+      height: 100px;
+    }
+
+    .timeline-title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .timeline-job-details {
+      color:var(--text-color);
+    }
+
+    .timeline-company {
+      margin-top: 5px;
+      color:var(--text-color);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    </style>
 </head>
 
 <body>
@@ -72,6 +166,38 @@
     <div class="subHeader" id="work-experience">
         <div class="container">
             <h1 class="my-heading">Work Experience</h1>
+        </div>
+            <div class="">
+                <div class="timeline">
+                    <div class="timeline-item">
+                      <div class="timeline-content">
+                        <div class="timeline-details">
+                          <h3 class="timeline-title">Software Development Engineer</h3>
+                          <span class="timeline-job-details">Zoho - October 2022 to Present</span>
+                          <p class="timeline-company">Chennai , TN, India</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor felis et velit tincidunt, a dictum eros hendrerit. In hac habitasse platea dictumst.</p>
+                        </div>
+                        <div class="timeline-logo">
+                            <img src="./images/work Experience/Zoho-logo.png" alt="Zoho">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-content">
+                        <div class="timeline-details">
+                          <h3 class="timeline-title">Program Analyst</h3>
+                          <span class="timeline-job-details">Cognizant - June 2021 to October 2022</span>
+                          <p class="timeline-company">Chennai , TN, India</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor felis et velit tincidunt, a dictum eros hendrerit. In hac habitasse platea dictumst.</p>
+                        </div>
+                        <div class="timeline-logo">
+                            <img src="./images/work Experience/CTSH_BIG.png" alt="Cognizant">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
         </div>
 
     </div>
@@ -221,8 +347,12 @@
             <a href="https://www.instagram.com/divakarthiyagarajen/" target="_blank"><img
                     src="./images/Social/instagram.png" alt="instagram"></a>
         </div>
+        <div class="social_tag">
+            <h4  onclick="scrollToElement('get-in-touch')">
+                Share thoughts and insights ?
+            </h4>
+        </div>
     </div>
-
     </div>
     <script src="./JS/script.js"></script>
 </body>

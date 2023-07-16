@@ -51,9 +51,8 @@ strong{
     margin: 30px;
 }
 
-.fixed-header h4:hover {
+.fixed-header h4:hover, .fixed-footer h4:hover,.fixed-footer h3:hover {
     transform: scale(1.1);
-
 }
 
 .fixed-footer {

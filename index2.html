@@ -1,52 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Numbered Box Example</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Experience</title>
   <style>
-   .numbered-box {
-  position: relative;
-  border: 2px solid #000;
-  padding: 10px;
-  margin: 20px;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+    }
 
-.numbered-box::before {
-  content: "1";
-  position: absolute;
-  top: 50%;
-  left: -15px;
-  transform: translateY(-50%);
-  background-color: #000;
-  color: #fff;
-  padding: 6px;
-  border-radius: 50%;
-  font-size: 16px;
-}
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
 
-.numbered-box::after {
-  content: "1";
-  position: absolute;
-  top: 50%;
-  right: -15px;
-  transform: translateY(-50%);
-  background-color: #000;
-  color: #fff;
-  padding: 6px;
-  border-radius: 50%;
-  font-size: 16px;
-}
+    .timeline-item {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fade-in 1s ease-in-out forwards;
+      cursor: pointer;
+    }
 
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .timeline-content {
+      display: flex;
+      align-items: flex-start;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: #ccc;
+      z-index: 1;
+    }
+
+    .timeline-details {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      margin-right: 15px;
+      overflow: hidden;
+      max-height: 100px;
+      transition: max-height 0.3s ease;
+    }
+
+    .timeline-details.expanded {
+      max-height: none;
+    }
+
+    .timeline-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .timeline-title {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .timeline-job-details {
+      color: #888;
+    }
+
+    .timeline-company {
+      margin-top: 5px;
+      color: #555;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
-  <div class="numbered-box">
-    Content goes here
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-details">
+          <h3 class="timeline-title">Senior Developer</h3>
+          <span class="timeline-job-details">Company A - 2019 to Present</span>
+          <p class="timeline-company">San Francisco, CA</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor felis et velit tincidunt, a dictum eros hendrerit. In hac habitasse platea dictumst. More content here...</p>
+        </div>
+        <div class="timeline-logo">
+          <img src="company_a_logo.png" alt="Company A Logo">
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <div class="timeline-details">
+          <h3 class="timeline-title">Project Manager</h3>
+          <span class="timeline-job-details">Company B - 2017 to 2019</span>
+          <p class="timeline-company">New York, NY</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor felis et velit tincidunt, a dictum eros hendrerit. In hac habitasse platea dictumst. More content here...</p>
+        </div>
+        <div class="timeline-logo">
+          <img src="company_b_logo.png" alt="Company B Logo">
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="numbered-box">
-    Content goes here
-  </div>
-  <div class="numbered-box">
-    Content goes here
-  </div>
+
+  <script>
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    timelineItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.querySelector('.timeline-details').classList.toggle('expanded');
+      });
+    });
+  </script>
 </body>
 </html>

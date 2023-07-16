@@ -48,4 +48,12 @@ function scrollToElement(elementId) {
   });
 }
 
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+timelineItems.forEach(item => {
+  item.addEventListener('click', () => {
+    item.querySelector('.timeline-details').classList.toggle('expanded');
+  });
+});
+
 typeWriter();
