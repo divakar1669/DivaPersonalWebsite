@@ -23,16 +23,16 @@ function darkMode()
         image.classList.remove("icon--light");
         image.classList.add("icon--dark");
         image.name="moon-outline";
-        root.style.setProperty('--text-color', 'white');
-        root.style.setProperty('--backrgoud-color', 'black');
+        root.style.setProperty('--text-color', '#fffffc;');
+        root.style.setProperty('--backrgoud-color', '#03071e');
     }
     else //LIGHT
     {
         image.classList.remove("icon--dark");
         image.classList.add("icon--light");
         image.name="sunny-outline";
-        root.style.setProperty('--text-color', 'black');
-        root.style.setProperty('--backrgoud-color', 'white');
+        root.style.setProperty('--text-color', '#003049');
+        root.style.setProperty('--backrgoud-color', '#f1f7ed');
     }
 
 }

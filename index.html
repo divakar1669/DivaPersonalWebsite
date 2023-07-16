@@ -14,6 +14,63 @@
     <link rel="shortcut icon" href="./images/aboutMe/resume_2006710.png" type="image/x-icon">
     <style>
 
+
+
+/* === BASE HEADING === */ 
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+  color: var(--text-color)
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1;
+}
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* === HEADING STYLE #1 === */
+.one h1 {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b80000;
+}
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #b80000;
+}
+
+
     .timeline {
       display: flex;
       flex-direction: column;
@@ -155,7 +212,7 @@
         <h4 onclick="scrollToElement('get-in-touch')">Get In Touch</h4>
 
         <label class="toggle " for="toggle">
-            <ion-icon id="moon_Or_Sun" class="icon icon--light" name="moon-outline"></ion-icon>
+            <ion-icon id="moon_Or_Sun" class="icon icon--light" name="sunny-outline"></ion-icon>
             <!-- <ion-icon class="icon icon--dark" name="moon-outline"></ion-icon> -->
         </label>
         <input class="checkbox" type="checkbox" id="toggle" onclick="darkMode()" />
@@ -166,7 +223,10 @@
 
     <div class="subHeader" id="about-me">
         <div class="container">
-            <h1 class="my-heading">About Me</h1>
+            <div class="one">
+                <h1 class="my-heading">About Me</h1>
+              </div>
+           
         </div>
         <div class="container">
             <div class="element">
@@ -202,7 +262,9 @@
 
     <div class="subHeader" id="work-experience">
         <div class="container">
-            <h1 class="my-heading">Work Experience</h1>
+            <div class="one">
+                <h1 class="my-heading">Work Experience</h1>
+              </div>
         </div>
             <div class="">
                 <div class="timeline">
@@ -250,7 +312,9 @@
     <div class="subHeader" id="academic-info">
 
         <div class="container">
-            <h1 class="my-heading">Academic Info</h1>
+            <div class="one">
+                <h1 class="my-heading">Academic Info</h1>
+              </div>
         </div>
 
         <div class="academic_info">
@@ -302,7 +366,9 @@
 
     <div class="subHeader" id="skills-project">
         <div class="container">
-            <h1 class="my-heading">Skills</h1>
+            <div class="one">
+                <h1 class="my-heading">Skills</h1>
+              </div>
         </div>
 
     </div>
@@ -317,13 +383,17 @@
 
     <div class="subHeader" id="my-books">
         <div class="container">
-            <h1 class="my-heading">My Book Shlef</h1>
+            <div class="one">
+                <h1 class="my-heading">My Book Shlef</h1>
+              </div>
         </div>
     </div>
 
     <div class="subHeader" id="get-in-touch">
         <div class="container">
-            <h1 class="my-heading">Get In Touch</h1>
+            <div class="one">
+                <h1 class="my-heading">Get In Touch</h1>
+              </div>
         </div>
         <div class="social_container">
             <div class="input_box">

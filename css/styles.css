@@ -2,9 +2,9 @@
 
     --border-radius: 30px;
     --thickness: 5px;
-    --border-color: #1e90ff;
-    --text-color: white;
-    --backrgoud-color: black;
+    --border-color: hsl(210, 100%, 56%);
+    --text-color: #003049;
+    --backrgoud-color :#f1f7ed; 
 }
 
 body {
