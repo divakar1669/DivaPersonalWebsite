@@ -32,11 +32,11 @@ strong{
     background: var(--backrgoud-color);
     color: var(--text-color);
     text-align: left;
-    height: 12%;
+    height: 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
 
 }
 
@@ -47,7 +47,6 @@ strong{
 
 .fixed-header h4,
 .checkbox label {
-    display: inline-block;
     margin: 30px;
 }
 
