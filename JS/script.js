@@ -77,7 +77,31 @@ function redirectToResume()
 function diva()
 {
   var x =10;
-  document.getElementById("aboutDiva").innerHTML += "     ";
+  var y = sendRequestToAdvIO();
 }
+
+
+function sendRequestToAdvIO()
+{
+const url = 'https://divaprofessionalwebsite-791849473.development.catalystserverless.com/server/diva_professional_website_function/';
+
+const xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      const responseData = JSON.parse(xhr.responseText);
+      console.log(responseData); 
+    } else {
+      console.error('Error fetching data:', xhr.status, xhr.statusText);
+    }
+  }
+};
+xhr.open('GET', url, true);
+xhr.onerror = function () {
+  console.error('Network error occurred');
+};
+xhr.send();
+ }
 diva();
 typeWriter();

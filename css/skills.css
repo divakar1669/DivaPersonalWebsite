@@ -1,0 +1,43 @@
+.skills
+{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+.skills img
+{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 0%;
+   
+}
+
+.skills img:hover 
+{
+
+    transform: scale(1.1);
+}
+
+.books
+{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+.books img
+{
+    height: 200px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 0%;
+   
+}
+
+.books img:hover 
+{
+
+    transform: scale(1.1);
+}

@@ -11,197 +11,13 @@
     <link rel="stylesheet" href="./css/darkmode.css">
     <link rel="stylesheet" href="./css/sendMessage.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/skills.css">
     <link rel="shortcut icon" href="./images/aboutMe/resume_2006710.png" type="image/x-icon">
+
     <style>
         /* === BASE HEADING === */
 
-        h1 {
-            position: relative;
-            padding: 0;
-            margin: 0;
-            font-family: "Raleway", sans-serif;
-            font-weight: bolder;
-            font-size: 40px;
-            color: var(--text-color) -webkit-transition: all 0.4s ease 0s;
-            -o-transition: all 0.4s ease 0s;
-            transition: all 0.4s ease 0s;
-
-        }
-
-        h1 span {
-            display: block;
-            font-size: 0.5em;
-            line-height: 1;
-        }
-
-        h1 em {
-            font-style: normal;
-            font-weight: 600;
-        }
-
-        /* === HEADING STYLE #1 === */
-        .one h1 {
-            text-align: center;
-            padding-bottom: 5px;
-        }
-
-        .one h1:before {
-            width: 28px;
-            height: 5px;
-            display: block;
-            content: "";
-            position: absolute;
-            bottom: 3px;
-            left: 50%;
-            margin-left: -14px;
-            background-color: #b80000;
-        }
-
-        .one h1:after {
-            width: 100px;
-            height: 1px;
-            display: block;
-            content: "";
-            position: relative;
-            margin-top: 10px;
-            left: 50%;
-            margin-left: -50px;
-            background-color: #b80000;
-        }
-
-
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: flex-start;
-            position: relative;
-            margin-bottom: 30px;
-            opacity: 0;
-            animation: fade-in 1s ease-in-out forwards;
-            cursor: pointer;
-        }
-
-        .timeline-details p,
-        .timeline-details span,
-        h3 {
-            margin: 5px;
-            padding: 5px;
-        }
-
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .timeline-content {
-            display: flex;
-            align-items: flex-start;
-            flex: 1;
-            justify-content: space-between;
-        }
-
-        .timeline-line {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background-color: var(--backrgoud-color);
-            z-index: 1;
-        }
-
-        .timeline-details {
-            background-color: var(--backrgoud-color);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 2;
-            flex: 1;
-            margin-right: 15px;
-            overflow: hidden;
-            max-height: 100px;
-            transition: max-height 0.3s ease;
-        }
-
-        .timeline-details.expanded {
-            max-height: none;
-        }
-
-        .timeline-logo {
-
-            object-fit: cover;
-            margin-right: 30px;
-        }
-
-        .timeline-logo img {
-            border-radius: 0%;
-            width: 300px;
-            height: 100px;
-        }
-
-        .timeline-title {
-            margin: 0;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 5px;
-            padding: 5px;
-        }
-
-        .timeline-job-details {
-            color: var(--text-color);
-        }
-
-        .timeline-company {
-            margin-top: 5px;
-            color: var(--text-color);
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Overlay */
-        .timeline-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .timeline-item:hover .timeline-overlay {
-            opacity: 1;
-        }
-
-        .timeline-overlay-text {
-            font-weight: bold;
-            color: #888;
-            font-size: 18px;
-        }
+       
     </style>
 </head>
 
@@ -212,7 +28,7 @@
         <h4 onclick="scrollToElement('work-experience')">Work Experience</h4>
         <h4 onclick="scrollToElement('academic-info')">Academic Info</h4>
         <h4 onclick="scrollToElement('skills-project')">Skills & Project</h4>
-        <h4 onclick="scrollToElement('get-in-touch')">Get In Touch</h4>
+        <h4 onclick="scrollToElement('my-books')">My Book Shelf</h4>
 
         <label class="toggle " for="toggle">
             <ion-icon id="moon_Or_Sun" class="icon icon--light" name="sunny-outline"></ion-icon>
@@ -251,14 +67,9 @@
 
                 <div class="blackboard">
                     <p id="aboutDiva">
-                    <br>
                     </p>
                 </div>
-
             </div>
-
-
-
         </div>
 
 
@@ -428,6 +239,43 @@
                 <h1 class="my-heading">Skills</h1>
             </div>
         </div>
+            <div class="">
+               
+                <div> <h2>Programming Languages</h2>  </div>
+                        <div class="skills">
+                            <img src="./images/skills/java.png" alt="JAVA">
+                            <img src="./images/skills/python.webp" alt="PYTHON" >
+                            <img src="./images/skills/c.png" alt="C">
+                            <img src="./images/skills/c++.png" alt="C++">
+                        </div>
+                <div> <h2>Data Bases</h2> 
+                        <div class="skills">
+                            <img src="./images/skills/Database-mysql.svg.png" alt="MYSQL">
+                            <img src="./images/skills/Postgresql_elephant.svg.png" alt="PSQL" >
+                            <img src="./images/skills/mongoDb.png" alt="MONGODB">
+                            <img src="./images/skills/fireBase.png" alt="FIREBASE">
+                        </div>
+                </div>
+
+                <div> <h2>Full Stack Technolgies</h2></div>
+                    <div class="skills">
+                        <img src="./images/skills/html5.png" alt="HTML5">
+                        <img src="./images/skills/css.svg" alt="CSS" >
+                        <img src="./images/skills/js.png" alt="JavaScript">
+                        <img src="./images/skills/React-icon.svg.png" alt="REACT">
+                        <img src="./images/skills/spring.png" alt="SPRING">
+                        <img src="./images/skills/NODE.png" alt="NODE JS">
+                    </div>
+                </div>
+                <div> <h2>IDE 's</h2>  </div>
+                    <div class="skills">
+                        <img src="./images/skills/ecllipse.png" alt="Eclipse">
+                        <img src="./images/skills/IntelliJ_IDEA.svg.png" alt="IntelliJ" >
+                        <img src="./images/skills/vscode.png" alt="vscode">
+                    </div>
+            </div>
+            </div>
+       
 
     </div>
 
@@ -444,6 +292,34 @@
             <div class="one">
                 <h1 class="my-heading">My Book Shlef</h1>
             </div>
+        </div>
+        <div>
+            <div> <h2>Personal Finance</h2></div>
+                <div class="books">
+                    <a href=""><img src="./images/books/personalFinance/RichDadPoorDad.jpeg" alt="Rich Dad Poor Dad">                    </a>
+                    <img src="./images/books/personalFinance/PyscologyOfMoney.webp" alt="Psycology of Money" >
+                    <img src="./images/books/personalFinance/Think And grow rich.jpg" alt="Think and Grow Rich">
+                </div>
+           
+            <div> <h2>Computers</h2></div>
+            <div class="books">
+                    <img src="./images/books/computers/CTCI.jpeg" alt="Cracking the coding Interview ">
+                    <img src="./images/books/computers/AlexYu.png" alt="System Design by alex Yu" >
+                    <img src="./images/books/computers/HeadFirstSystemDesign.jpg" alt="Head First System Design ">
+            </div>
+            <!-- <div> <h2>Story books</h2></div>
+            <div class="books">
+                <img src="./images" alt="Ponniyin Selvan ">
+                <img src="./images/" alt="Alchemist" >
+                <img src="./images/" alt="Sherlock Holmes ">
+            </div> -->
+            <div> <h2>Auto Biography</h2></div>
+            <div  class="books">
+                <img src="./images/books/autoBioGraphy/TheWingsOfFire.jpeg" alt="The Wings Of Fire">
+                <img src="./images/books//autoBioGraphy/stevJobs.jpeg" alt="Stev Jobs  ">
+                <!-- <img src="./images/" alt="The Road Ahead" > -->
+            </div>
+            </div> 
         </div>
     </div>
 

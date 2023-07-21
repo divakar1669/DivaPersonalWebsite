@@ -154,8 +154,8 @@ img {
     background-image: radial-gradient(circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient(215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient(circle at right, #111, rgba(51, 51, 51, 1));
     background-color: #333;
     padding: 5px;
-    width: 100%;
-    height: 100%
+    width: 1000px;
+    height: 90%
 }
 
 .blackboard>p {
@@ -181,4 +181,192 @@ img {
 
 .hide {
     visibility: hidden;
+}
+
+h1 {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    color: var(--text-color) -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+
+}
+
+h1 span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1;
+}
+
+h1 em {
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* === HEADING STYLE #1 === */
+.one h1 {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.one h1:before {
+    width: 28px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #b80000;
+}
+
+.one h1:after {
+    width: 100px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 10px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #b80000;
+}
+
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards;
+    cursor: pointer;
+}
+
+.timeline-details p,
+.timeline-details span,
+h3 {
+    margin: 5px;
+    padding: 5px;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-content {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--backrgoud-color);
+    z-index: 1;
+}
+
+.timeline-details {
+    background-color: var(--backrgoud-color);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    margin-right: 15px;
+    overflow: hidden;
+    max-height: 100px;
+    transition: max-height 0.3s ease;
+}
+
+.timeline-details.expanded {
+    max-height: none;
+}
+
+.timeline-logo {
+
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+.timeline-logo img {
+    border-radius: 0%;
+    width: 300px;
+    height: 100px;
+}
+
+.timeline-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.timeline-job-details {
+    color: var(--text-color);
+}
+
+.timeline-company {
+    margin-top: 5px;
+    color: var(--text-color);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Overlay */
+.timeline-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.timeline-item:hover .timeline-overlay {
+    opacity: 1;
+}
+
+.timeline-overlay-text {
+    font-weight: bold;
+    color: #888;
+    font-size: 18px;
 }
