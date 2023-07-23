@@ -70,7 +70,7 @@ timelineItems.forEach(item => {
 
 function redirectToResume()
 {
-  window.open("https://drive.google.com/file/d/1zlYW2g8gpFSqpP-zMT8-VUFvzhWipcKn/view?usp=sharing", "_blank");
+  window.open("https://drive.google.com/file/d/1BkAug_MnLGl9Oy1aAfpPzbSwC7ZqILk7/view?usp=sharing", "_blank");
 
 }
 
