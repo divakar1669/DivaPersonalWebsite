@@ -87,3 +87,60 @@
     }
   }
   
+
+
+  /* Styles for the submit button */
+.submit-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background: #1e90ff; /* Calming blue color */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for the submit button */
+.submit-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Pulsating animation when the button is idle */
+@keyframes pulsate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.submit-button::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+  opacity: 0;
+  animation: pulsate 2s infinite;
+}
+
+/* Smooth transition for click animation */
+.submit-button:active::before {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+/* Styles for light theme */
+body.light-theme .submit-button {
+  background: #1e90ff; /* Calming blue color */
+}
