@@ -70,7 +70,7 @@ timelineItems.forEach(item => {
 
 function redirectToResume()
 {
-  window.open("https://resume-divakar1669-development.zohostratus.in/DivakarThiyagarejen_resume.pdf", "_blank");
+  window.open("https://resume-divakar1669-development.zohostratus.in/Resume___divakar1669.pdf", "_blank");
 
 }
 
