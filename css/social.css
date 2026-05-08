@@ -11,19 +11,18 @@
     margin: 20px;
 }
 .social_box {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 50%;
-    justify-content: center;
-    align-items: center;
   }
 
   
 .social_box img {
 
     height: 100%;
-    width: 5%;
+    width: 28px;
     margin: 20px;
     transition: transform 0.2s ease-in-out;
     border-radius: 0%;
